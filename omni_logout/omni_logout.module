@@ -1,0 +1,12 @@
+<?php
+/**
+ * @file
+ * Omni Logout Drupal module.
+ */
+
+/**
+ * Implements hook_user_logout().
+ */
+function session_cookie_lifetime_user_logout($account) {
+  drupal_session_destroy_uid($account->uid);
+}
